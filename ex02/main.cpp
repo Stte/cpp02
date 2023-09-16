@@ -2,28 +2,29 @@
 
 int	main(void)
 {
-	// Fixed		a;
-	Fixed const	b(10);
-	Fixed const	c(0);
-	// Fixed const	d(b);
+	Fixed const	b(Fixed(5.05f) * Fixed(2));
+	Fixed		c;
 
-	// a = Fixed (1234.4321f);
+	if (b > c)
+		std::cout << "B is bigger than C" << std::endl;
+	else
+		std::cout << "B is smaller than C" << std::endl;
 
-	// std::cout << "a is " << a << std::endl;
-	// std::cout << "b is " << b << std::endl;
-	// std::cout << "c is " << c << std::endl;
-	// std::cout << "d is " << d << std::endl;
-
-	// std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	// std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	// std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	// std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-
-	// if (b > c)
-	// 	std::cout << "B is bigger" << std::endl;
-	// else
-	// 	std::cout << "B is smaller" << std::endl;
+	std::cout << "c++: " << c++ << std::endl;
+	std::cout << "c: " << c << std::endl;
+	std::cout << "++c: " << ++c << std::endl;
+	std::cout << "c--: " << c-- << std::endl;
+	std::cout << "c: " << c << std::endl;
+	std::cout << "--c: " << --c << std::endl;
 
 	std::cout << b / c << std::endl;
+	std::cout << b / 2 << std::endl;
+	std::cout << b + 1.5f << std::endl;
+	std::cout << b - 0.5f << std::endl;
+	std::cout << b * 2.0f << std::endl;
+
+	std::cout << "Min: "<<Fixed::min(b, c) << std::endl;
+	std::cout << "Max: "<<Fixed::max(b, c) << std::endl;
+
 	return (0);
 }

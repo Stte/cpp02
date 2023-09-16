@@ -1,6 +1,6 @@
 NAME = fixed
 CC = c++
-SRC = main.cpp Fixed.cpp arithmetics.cpp comparisons.cpp
+SRC = main.cpp Fixed.cpp exII.cpp
 OBJ = $(SRC:.cpp=.o)
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

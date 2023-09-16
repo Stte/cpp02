@@ -18,7 +18,7 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 
-		/* comparisons.cpp */
+		/* exII.cpp */
 		bool	operator>(const Fixed &other) const;
 		bool	operator<(const Fixed &other) const;
 		bool	operator>=(const Fixed &other) const;
@@ -26,22 +26,24 @@ class Fixed
 		bool	operator==(const Fixed &other) const;
 		bool	operator!=(const Fixed &other) const;
 
-		/* arithmetics.cpp */
 		Fixed	operator+(const Fixed &other) const;
 		Fixed	operator-(const Fixed &other) const;
 		Fixed	operator*(const Fixed &other) const;
 		Fixed	operator/(const Fixed &other) const;
 
-		/* incdec.cpp */
 		Fixed &operator++(void);
 		Fixed operator++(int);
 		Fixed &operator--(void);
 		Fixed operator--(int);
 
+		static Fixed &min(Fixed &a, Fixed &b);
+		static Fixed &min(const Fixed &a, const Fixed &b);
+		static Fixed &max(Fixed &a, Fixed &b);
+		static Fixed &max(const Fixed &a, const Fixed &b);
 
 	private:
-		int					value;
 		static const int	point = 8;
+		int					value;
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
